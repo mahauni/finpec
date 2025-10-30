@@ -1,0 +1,24 @@
+{
+  "name": "finpec",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mahauni/finpec#readme",
+  "bugs": {
+    "url": "https://github.com/mahauni/finpec/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahauni/finpec.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
