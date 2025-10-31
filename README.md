@@ -16,19 +16,21 @@ Rules:
 Ao tentar vender mais do que tem disponível, o sistema retorna um erro de operação inválida
 
 Request Body:
-Array of operations:
+Array of operations
 
-Operation Object
-"operation": "buy" | "sell"
-"unit-cost": number
+Operation Object: {
+"operation": "buy" | "sell",
+"unit-cost": number,
 "quantity": number
+}
 
 example:
+```json
 [
 {"operation":"buy", "unit-cost":10.00, "quantity":10000},
 {"operation":"sell", "unit-cost":20.00, "quantity":5000},
 ]
-
+```
 
 Response:
 { "message": "Operações registradas com sucesso." }
@@ -40,4 +42,5 @@ Description: Retorna o capital ganho ou perda total com base em todas as operaç
 
 Response:
 { "capitalGain": 50000.00 }
+
 

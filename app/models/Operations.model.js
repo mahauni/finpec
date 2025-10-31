@@ -5,12 +5,11 @@ import {
 } from "../views/Operations.view.js";
 
 export function createOperationsModel(body) {
-  // here we need a SQL Transaction for if something goes wrong
+  // Need a SQL Transaction for if something goes wrong
   const availableQuantity = getAvailableQuantity();
   for (let i = 0; i < body.length; i++) {
     const { operation, ["unit-cost"]: unitCost, quantity } = body[i];
 
-    // this is not what im doing is shit
     if (operation === "sell" && availableQuantity - quantity <= 0) {
       throw createError(400, "Operação inválida");
     }
