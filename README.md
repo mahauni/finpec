@@ -7,8 +7,9 @@ npm install && npm start
 A API estará rodando na porta 1234
 
 As rotas disponíveis na API:
+---
 
-POST | /operations | Registrar as operações
+### POST | /operations | Registrar as operações
 Description: Registro de um array the operações podendo ele receber uma ou multiplas operações
 
 Rules:
@@ -32,8 +33,9 @@ example:
 Response:
 { "message": "Operações registradas com sucesso." }
 
+---
 
-GET | /capital-gain | Retorna o capital atual
+### GET | /capital-gain | Retorna o capital atual
 Description: Retorna o capital ganho ou perda total com base em todas as operações ate o momento
 
 Response:
