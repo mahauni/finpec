@@ -10,8 +10,8 @@ export function getCapitalGainModel() {
     const { operation, ["unit-cost"]: unitCost, quantity } = operations[i];
 
     if (operation === "buy") {
-      buyTimes++;
-      totalCost += unitCost;
+      buyTimes += quantity;
+      totalCost += unitCost * quantity;
     }
 
     if (operation === "sell") {

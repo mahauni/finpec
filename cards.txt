@@ -1,0 +1,35 @@
+1 - Card criação de operations
+Criação de endpoint POST para o adicionamento de novas operações.
+No endpoint /operations, pode receber um array de operações, tendo 1 ou mais operações nele.
+
+O objeto operações tem como base esse tipo:
+{
+"operation": "buy" | "sell",
+"unit-cost": number,
+"quantity": number
+}
+
+Exemplo de request:
+[
+{"operation":"buy", "unit-cost":10.00, "quantity":10000},
+{"operation":"sell", "unit-cost":20.00, "quantity":5000}
+]
+
+e devera ter essa HTTP response esperado:
+{ "message": "Operações registradas com sucesso." }
+
+
+2 - Card de calcular ganho capital total
+Criação de endpoint GET para calcular o ganho de capital total até o momento atual.
+No endpoint /capital-gain, ao acessá-lo, o sistema deverá calcular o ganho de capital até o momento utilizando a ordem cronológica das operações.
+
+O ganho é calculado por essa fórmula:
+Ganho = (Preço de venda - Custo médio de compra) × Quantidade vendida.
+
+É necessário atualizar o estoque de unidades disponíveis após cada venda.
+
+A resposta HTTP tem que ser, por exemplo, algo assim:
+{ "capitalGain": 50000.00 }
+
+3- Card crie um handler the Error
+Criacao de um middleware para tratar dos erros vindo da API
