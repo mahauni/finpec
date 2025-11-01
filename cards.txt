@@ -31,5 +31,16 @@ Ganho = (Preço de venda - Custo médio de compra) × Quantidade vendida.
 A resposta HTTP tem que ser, por exemplo, algo assim:
 { "capitalGain": 50000.00 }
 
-3- Card crie um handler the Error
+
+3 - Card crie um handler the Error
 Criacao de um middleware para tratar dos erros vindo da API
+
+
+4 - Card: crie uma verificação do request do POST de operations.
+As regras são as seguintes:
+
+Tem que ser um array com no mínimo uma operação.
+A operação deve ter os seguintes campos com as seguintes regras:
+"operation" deve ser ou buy ou sell.
+"unit-cost" deve ser um número positivo ou zero.
+"quantity" deve ser um número positivo ou zero.
