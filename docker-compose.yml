@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    container_name: api
+    env_file:
+      - .env
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:${API_PORT}/healthcheck" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
