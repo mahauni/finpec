@@ -1,5 +1,6 @@
 import { createOperationsModel } from "../models/Operations.model.js";
 
+// Operations
 export async function postOperation(req, res, next) {
   const validated = validateBody(req.body);
 
@@ -16,6 +17,7 @@ export async function postOperation(req, res, next) {
   }
 }
 
+// Operations Validation
 function validateBody(body) {
   if (!Array.isArray(body)) {
     return "O request deve ser um array";

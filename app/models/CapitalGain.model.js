@@ -9,11 +9,13 @@ export function getCapitalGainModel() {
   for (let i = 0; i < operations.length; i++) {
     const { operation, ["unit-cost"]: unitCost, quantity } = operations[i];
 
+    // sum of the values to get the average cost
     if (operation === "buy") {
       buyTimes += quantity;
       totalCost += unitCost * quantity;
     }
 
+    // calculating the total capital gain
     if (operation === "sell") {
       const averageCost = totalCost / buyTimes;
       total += (unitCost - averageCost) * quantity;

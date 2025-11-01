@@ -6,16 +6,18 @@ import {
 
 export function createOperationsModel(body) {
   // Need a SQL Transaction for if something goes wrong
-  const availableQuantity = getAvailableQuantity();
+  let availableQuantity = getAvailableQuantity();
   for (let i = 0; i < body.length; i++) {
     const { operation, ["unit-cost"]: unitCost, quantity } = body[i];
 
-    if (operation === "sell" && availableQuantity - quantity <= 0) {
+    // verification if selling does not goes bellow zero
+    if (operation === "sell" && availableQuantity - quantity < 0) {
       throw createError(400, "Operação inválida");
     }
 
     try {
       createOperation(operation, unitCost, quantity);
+      availableQuantity += quantity;
     } catch (err) {
       throw createError(401, "Could not create operation");
     }

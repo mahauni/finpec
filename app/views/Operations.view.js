@@ -15,6 +15,7 @@ export function getOperations() {
   return DB;
 }
 
+// get the current available quantity of items
 export function getAvailableQuantity() {
   let total = 0;
   for (let i = 0; i < DB.length; i++) {
