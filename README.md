@@ -1,10 +1,11 @@
 # Como rodar o projeto
 
-Para rodar o projeto digite esse comando no terminal:
+Para o projeto, é necessário o node v24.8.0.
+Digite esse comando no terminal para rodar o projeto:
 
 npm install && npm start
 
-A API estará rodando na porta 8000
+A API estará rodando na porta 8000 por default, ou por outra porta selecionada no .env
 
 As rotas disponíveis na API:
 ---

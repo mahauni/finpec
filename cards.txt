@@ -53,3 +53,7 @@ Crie um endpoint /healthcheck que retorne 200 e true para verificar o estado atu
 
 A resposta HTTP esperada:
 200 - true
+
+
+6 - Card crie um .env para colocar variáveis de ambiente.
+Crie um .env para colocar as variáveis de ambiente e coloque um valor default para os valores se nada for digitado.

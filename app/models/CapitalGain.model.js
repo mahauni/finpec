@@ -17,10 +17,15 @@ export function getCapitalGainModel() {
 
     // calculating the total capital gain
     if (operation === "sell") {
-      const averageCost = totalCost / buyTimes;
+      const averageCost = totalCost / validateZero(buyTimes);
       total += (unitCost - averageCost) * quantity;
     }
   }
 
   return total;
+}
+
+function validateZero(num) {
+  if (num === 0) return 1;
+  return num;
 }

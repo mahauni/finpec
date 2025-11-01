@@ -2,8 +2,9 @@ import express from "express";
 import router from "./app/routers/index.js";
 import { errorHandler } from "./app/middlewares/Error.middleware.js";
 
+process.loadEnvFile();
 const app = express();
-const PORT = 8000;
+const PORT = process.env.API_PORT ?? 8000;
 
 // Middlewares before the router
 app.use(express.json());
