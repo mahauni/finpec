@@ -22,7 +22,7 @@ export function getCapitalGainModel() {
     }
   }
 
-  return total;
+  return total.toFixed(2);
 }
 
 function validateZero(num) {
