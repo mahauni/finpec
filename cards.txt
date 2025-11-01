@@ -2,6 +2,8 @@
 Criação de endpoint POST para o adicionamento de novas operações.
 No endpoint /operations, pode receber um array de operações, tendo 1 ou mais operações nele.
 
+As operações sucessivas devem acumular, assim, para cada compra registrada, ajustar o custo médio e a operação. Se não houver estoque suficiente para fazer a venda, o sistema deve retornar o erro 400 - Operação inválida.
+
 O objeto operações tem como base esse tipo:
 {
 "operation": "buy" | "sell",
