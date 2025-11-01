@@ -4,7 +4,7 @@ Para rodar o projeto digite esse comando no terminal:
 
 npm install && npm start
 
-A API estará rodando na porta 1234
+A API estará rodando na porta 8000
 
 As rotas disponíveis na API:
 ---
