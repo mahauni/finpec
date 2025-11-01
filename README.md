@@ -1,6 +1,6 @@
 # Como rodar o projeto
 
-Para o projeto, é necessário o node v24.8.0.
+Para o projeto, é necessário o node v24.
 Digite esse comando no terminal para rodar o projeto:
 
 npm install && npm start
