@@ -5,6 +5,7 @@ export async function postOperation(req, res, next) {
   const validated = validateBody(req.body);
 
   if (validated !== "") {
+    console.error(`Campos no body foram incorretos: ${validated}`);
     res.status(400).json({ message: validated });
     return;
   }

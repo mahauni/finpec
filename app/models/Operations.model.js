@@ -12,6 +12,9 @@ export function createOperationsModel(body) {
 
     // verification if selling does not goes bellow zero
     if (operation === "sell" && availableQuantity - quantity < 0) {
+      console.error(
+        `Operação inválida: operation: ${operation} availableQuantity: ${availableQuantity} quantity: ${quantity}`,
+      );
       throw createError(400, "Operação inválida");
     }
 
@@ -19,6 +22,7 @@ export function createOperationsModel(body) {
       createOperation(operation, unitCost, quantity);
       availableQuantity += quantity;
     } catch (err) {
+      console.error("Could not create operation: " + err);
       throw createError(401, "Could not create operation");
     }
   }
