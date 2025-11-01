@@ -4,7 +4,10 @@ import { getCapitalGain } from "../controllers/CapitalGain.controller.js";
 
 const router = express.Router();
 
+// Operations
 router.post("/operations", postOperation);
+
+// Capital Gains
 router.get("/capital-gain", getCapitalGain);
 
 export default router;
