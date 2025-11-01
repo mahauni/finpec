@@ -57,3 +57,6 @@ A resposta HTTP esperada:
 
 6 - Card crie um .env para colocar variáveis de ambiente.
 Crie um .env para colocar as variáveis de ambiente e coloque um valor default para os valores se nada for digitado.
+
+
+7 - Card criar Dockerfile para facilitar deploy do projeto
