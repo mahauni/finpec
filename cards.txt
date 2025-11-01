@@ -46,3 +46,10 @@ A operação deve ter os seguintes campos com as seguintes regras:
 "operation" deve ser ou buy ou sell.
 "unit-cost" deve ser um número positivo ou zero.
 "quantity" deve ser um número positivo ou zero.
+
+
+5 - Card crie um GET /healthcheck.
+Crie um endpoint /healthcheck que retorne 200 e true para verificar o estado atual da API, se ela está funcionando corretamente.
+
+A resposta HTTP esperada:
+200 - true

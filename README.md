@@ -43,4 +43,10 @@ Description: Retorna o capital ganho ou perda total com base em todas as operaç
 Response:
 { "capitalGain": 50000.00 }
 
+---
 
+### GET | /healthcheck| Retorna estado atual da API
+Description: Retorna valor padrão 200 para verificar estado atual da API
+
+Response:
+true
